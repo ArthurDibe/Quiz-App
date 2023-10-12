@@ -5,6 +5,8 @@ class StartWidget extends StatelessWidget {
   final verticalSpacer = const SizedBox(height: 50);
   final String welcomeText;
 
+  void startQuizClicked() {}
+
   @override
   Widget build(context) {
     return Container(
@@ -29,6 +31,13 @@ class StartWidget extends StatelessWidget {
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 25,
+              ),
+            ),
+            verticalSpacer,
+            ElevatedButton(
+              onPressed: startQuizClicked,
+              child: const Text(
+                'Start Quiz',
               ),
             ),
           ],
