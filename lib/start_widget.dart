@@ -21,10 +21,8 @@ class StartWidget extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset(
-              'assets/images/quiz-logo.png',
-              width: 230,
-            ),
+            Image.asset('assets/images/quiz-logo.png',
+                width: 230, color: const Color.fromARGB(149, 255, 255, 255)),
             verticalSpacer,
             Text(
               welcomeText,
