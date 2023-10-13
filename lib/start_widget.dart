@@ -34,10 +34,11 @@ class StartWidget extends StatelessWidget {
               ),
             ),
             verticalSpacer,
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: startQuizClicked,
               style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
-              child: const Text(
+              icon: const Icon(Icons.arrow_right_alt_sharp),
+              label: const Text(
                 'Start Quiz',
               ),
             ),
