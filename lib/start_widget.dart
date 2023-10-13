@@ -19,11 +19,11 @@ class StartWidget extends StatelessWidget {
       ),
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Image.asset(
               'assets/images/quiz-logo.png',
-              width: 250,
+              width: 230,
             ),
             verticalSpacer,
             Text(
