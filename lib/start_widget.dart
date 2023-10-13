@@ -36,6 +36,7 @@ class StartWidget extends StatelessWidget {
             verticalSpacer,
             ElevatedButton(
               onPressed: startQuizClicked,
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
               child: const Text(
                 'Start Quiz',
               ),
