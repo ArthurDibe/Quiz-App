@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_flutter/start_widget.dart';
+import 'package:quiz_flutter/start_screen.dart';
 
 void main() {
   runApp(
@@ -13,7 +13,7 @@ void main() {
               end: Alignment.bottomCenter,
             ),
           ),
-          child: const StartWidget(welcomeText: 'Learn Flutter the fun way!'),
+          child: const StartScreen(welcomeText: 'Learn Flutter the fun way!'),
         ),
       ),
     ),

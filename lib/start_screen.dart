@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class StartWidget extends StatelessWidget {
-  const StartWidget({super.key, required this.welcomeText});
+class StartScreen extends StatelessWidget {
+  const StartScreen({super.key, required this.welcomeText});
   final verticalSpacer = const SizedBox(height: 50);
   final String welcomeText;
 
