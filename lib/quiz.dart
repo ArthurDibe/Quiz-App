@@ -12,8 +12,14 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  Widget activeScreen =
-      const StartScreen(welcomeText: 'Learn Flutter the fun way!');
+  Widget? activeScreen;
+
+  @override
+  void initState() {
+    // executes before build method
+    this.activeScreen = StartScreen(switchScreen);
+    super.initState(); // initialize the parent State<Quiz>
+  }
 
   void switchScreen() {
     setState(() {

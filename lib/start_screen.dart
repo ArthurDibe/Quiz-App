@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key, required this.welcomeText});
-  final verticalSpacer = const SizedBox(height: 50);
-  final String welcomeText;
+  const StartScreen(this.startQuiz, {super.key});
 
-  void startQuizClicked() {}
+  final void Function() startQuiz;
+  final verticalSpacer = const SizedBox(height: 50);
+  final String welcomeText = 'Learn Flutter the fun way!';
 
   @override
   Widget build(context) {
@@ -28,7 +28,7 @@ class StartScreen extends StatelessWidget {
           ),
           verticalSpacer,
           ElevatedButton.icon(
-            onPressed: startQuizClicked,
+            onPressed: this.startQuiz,
             style: ElevatedButton.styleFrom(backgroundColor: Colors.purple),
             icon: const Icon(Icons.arrow_right_alt_sharp),
             label: const Text(
