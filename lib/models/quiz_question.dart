@@ -1,5 +1,5 @@
 class QuizQuestion {
-  QuizQuestion(this.text, this.answers);
-  final String text;
+  QuizQuestion(this.question, this.answers);
+  final String question;
   final List<String> answers;
 }
