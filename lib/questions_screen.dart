@@ -20,8 +20,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
   void changeQuestion() {
     setState(() {
-      questionNumber++;
-      currentQuestion = questions[questionNumber];
+      if (questionNumber < questions.length - 1) {
+        questionNumber++;
+        currentQuestion = questions[questionNumber];
+      }
     });
   }
 
