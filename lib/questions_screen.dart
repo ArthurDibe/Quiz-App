@@ -7,7 +7,8 @@ import 'package:quiz_flutter/models/quiz_question.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsScreen extends StatefulWidget {
-  const QuestionsScreen({super.key});
+  const QuestionsScreen({super.key, required this.onSelectAnswer});
+  final void Function(String answer) onSelectAnswer;
 
   @override
   State<QuestionsScreen> createState() {
@@ -19,7 +20,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   QuizQuestion currentQuestion = questions[0];
   int questionNumber = 0;
 
-  void changeQuestion() {
+  void changeQuestion(String answerText) {
+    // widget is a built-in by flutter that allow to access the parent class
+    widget.onSelectAnswer(answerText);
+
     setState(() {
       if (questionNumber < questions.length - 1) {
         questionNumber++;
@@ -49,7 +53,12 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             ),
             const SizedBox(height: 20),
             ...currentQuestion.getShuffledAnswers().map((answerOption) {
-              return AnswerButton(text: answerOption, onTap: changeQuestion);
+              return AnswerButton(
+                text: answerOption,
+                onTap: () {
+                  changeQuestion(answerOption);
+                },
+              );
             }),
           ],
         ),
